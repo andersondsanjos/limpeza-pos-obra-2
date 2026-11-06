@@ -1,6 +1,10 @@
 /* Ajustes da versão reformulada — mantém o visual mestre e melhora a leitura dos novos ativos. */
 .carousel-section { overflow: hidden; }
 .carousel-copy { max-width: 760px; margin: -18px auto 2px; font-weight: 600; }
+.track {
+  /* A tabela é o primeiro ativo e permanece visível antes de o movimento começar. */
+  animation-delay: 2.5s;
+}
 .track img.table-preview { width: 440px; object-fit: contain; background: #081a2a; padding: 8px; }
 
 @media (max-width: 800px) {
