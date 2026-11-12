@@ -74,4 +74,6 @@ async function staticFile(req, res) {
   }
 }
 
-http.createServer((req, res) => req.url?.startsWith('/api/meta-events') ? metaEvent(req, res) : staticFile(req, res)).listen(port);
+process.on('uncaughtException', error => console.error('uncaught_exception', error));
+process.on('unhandledRejection', error => console.error('unhandled_rejection', error));
+http.createServer((req, res) => req.url?.startsWith('/api/meta-events') ? metaEvent(req, res) : staticFile(req, res)).listen(port, () => console.log(`server_listening:${port}`));
