@@ -74,4 +74,4 @@ async function staticFile(req, res) {
   }
 }
 
-http.createServer((req, res) => req.url?.startsWith('/api/meta-events') ? metaEvent(req, res) : staticFile(req, res)).listen(port, '0.0.0.0');
+http.createServer((req, res) => req.url?.startsWith('/api/meta-events') ? metaEvent(req, res) : staticFile(req, res)).listen(port);
